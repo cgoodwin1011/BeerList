@@ -1,5 +1,24 @@
+/* Chrome, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border: 1px black solid;
+}
+::-webkit-scrollbar-track-piece  {
+  background-color: #f8d047;
+}
+  ::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  background-color: #0A4C95;
+}
+  
+
+
 body {
   background-color:#000;
+  background-image: url("../img/gold-fields.jpg");
+  background-size: cover;
+  position: relative;
 }
 
 #beer-add-new {
@@ -27,17 +46,22 @@ body {
   padding: 10px;
 }
 
-.column {
-  /* float: left;
-  margin: 20px;
-  background-color: grey;
-  padding-bottom: 100%;
-  margin-bottom: -100%; */
-}
-
 #beer-mug {
   width: 100px;
   float: left;
+}
+
+#beer-new-name {
+  height: 2em;
+  border: 1px #cd2b1d double;
+  display: block;
+  margin:10px auto;
+  /* background-color: green; */
+}
+
+.big-letter {
+  /* replaces capitals with large lower case letters where it improves readability */
+  font-size: 1.5em;
 }
 
 #container {
@@ -46,6 +70,9 @@ body {
   margin: auto;
   text-align: center;
   padding: 10px;
+  border: 5px black solid;
+  border-top: none;
+
 }
 
 header {
@@ -54,26 +81,33 @@ header {
   width: 768px;
   margin: auto;
   padding: 10px;
+  margin-top: 30px;
   /* color: firebrick; */
   background-color: #f8d047;
-  text-shadow: #000 2px 2px;
+  border: 5px black solid;
+  border-bottom: none;
 }
 
 header h1 {
   font-family: 'UnifrakturMaguntia', cursive;
-  font-size: 5em;
+  font-size: 3em;
   color: #cd2b1d;
+  text-shadow: #000 2px 2px;
+  margin: 0px auto;
+  padding-bottom: 0px;
+  display: inline;
+}
+
+header h2 {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 2em;
+  margin-top: 0px;
+  padding-top: 0px; 
+  display: inline;
 }
 
 #header-title {
-
-}
-
-#new-Beer-Name {
-  border: 1px #cd2b1d double;
-  height: 1em;
-  display: block;
-  margin:10px auto;
+  font-size: 0.7em;
 }
 
 .submit-btn {
