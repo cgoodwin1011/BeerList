@@ -4,7 +4,7 @@ var beers = require('../models/beers.js');
 var exphbs = require('express-handlebars');
 
 router.get('/', function(req, res) {
-  console.log("trying to get home page");
+  // console.log("trying to get home page");
   beers.all(function(beerData){
     var tried = [];
     var untried = [];
@@ -21,7 +21,7 @@ router.get('/', function(req, res) {
 } );
 
 router.post('/api/newBeer', function(req, res){
-  console.log(req.body.newBeerName);
+  // console.log(req.body.newBeerName);
   beers.addBeer(['beer_name'], [req.body.newBeerName], function(data)
   {
     res.redirect('/');
@@ -30,7 +30,7 @@ router.post('/api/newBeer', function(req, res){
 
 router.post('/api/triedBeer/:id', function (req, res) {
   var currentBeer = req.params.id;
-  console.log("current beer is "+currentBeer);
+  // console.log("current beer is "+currentBeer);
   beers.updateBeer(currentBeer, ['triedIt'], true, function(data) 
   {
     res.redirect('/');

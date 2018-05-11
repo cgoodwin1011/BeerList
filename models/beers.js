@@ -11,7 +11,7 @@ var beers = {
   },
 
   addBeer: function(coldata, colvalues, cb) { 
-    console.log("reached addBeer")
+    // console.log("reached addBeer")
     orm.addNew('myBeers', coldata, colvalues, function(response) 
     {
       cb(response);
@@ -19,8 +19,8 @@ var beers = {
   },
 
   updateBeer: function(ID, whichCol, toWhatVal, cb) { 
-    console.log("reached updateBeer:");
-    console.log(ID, whichCol, toWhatVal);
+    // console.log("reached updateBeer:");
+    // console.log(ID, whichCol, toWhatVal);
     orm.updateRecord('myBeers', whichCol, true, ID, function(response) 
     {
       cb(response);
@@ -29,14 +29,14 @@ var beers = {
 
   doneBeer: function(cb) {
     orm.selectWhere('myBeers', 'triedIt', true, function(response) {
-      console.log(response);
+      // console.log(response);
       cb(response);
     })
   },
 
   todoListBeer: function(cb) {
     orm.selectWhere('myBeers', 'triedIt', false, function(response) {
-      console.log(response);
+      // console.log(response);
       cb(response);
     })
   }

@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.static("public"));
-console.log("lets get our routes")
+// console.log("lets get our routes")
 app.use('/', routes);
 app.use('/api/newBeer', routes);
 app.use('/api/triedBeer/:id', routes);

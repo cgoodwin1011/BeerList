@@ -12,10 +12,10 @@ var orm = {
 
   selectWhere: function(tableInput, colToSearch, valOfCol, cbFunc) {
     var queryString = "SELECT * FROM ?? WHERE ?? = ?";
-    console.log(queryString);
+    // console.log(queryString);
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
       if (err) throw err;
-      console.log(result);
+      // console.log(result);
       cbFunc(result);
     });
   },
@@ -43,7 +43,7 @@ var orm = {
 
   updateRecord: function(table, whichCol, toWhatVal, whichRecord, cbFunc) {
     var queryString = "UPDATE ?? SET ?? = ? WHERE id = ?";
-    console.log("updating "+whichCol+" to "+toWhatVal+" where ID equals "+whichRecord)
+    // console.log("updating "+whichCol+" to "+toWhatVal+" where ID equals "+whichRecord)
     connection.query(queryString, [table, whichCol, toWhatVal, whichRecord], function(err, result) {
       if (err) throw err;
       cbFunc(result);
